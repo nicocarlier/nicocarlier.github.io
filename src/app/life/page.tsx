@@ -13,7 +13,7 @@ export default function LifePage() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-2"
         >
-          Life Journey
+          Life
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}

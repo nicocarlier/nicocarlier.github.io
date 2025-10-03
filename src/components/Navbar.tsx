@@ -34,7 +34,7 @@ const Navbar = () => {
                 : 'text-gray-700'
             }`}
           >
-            Life Journey
+            Life
           </Link>
         </Menubar.Menu>
 
