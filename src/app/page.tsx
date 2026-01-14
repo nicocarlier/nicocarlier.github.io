@@ -11,7 +11,7 @@ export default function About() {
       </h2>
       <section className="grid-cols-[4fr_9fr] gap-16 sm:grid">
         {/* Portrait */}
-        <div className="items-start justify-center sm:flex">
+        <div className="float-left max-w-[200px] mr-4 mb-4 sm:float-none sm:items-start sm:justify-center sm:flex sm:mx-auto sm:mr-0 sm:mb-0">
           <figure>
             <Image
               priority
