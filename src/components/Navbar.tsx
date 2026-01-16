@@ -21,12 +21,12 @@ const Navbar = () => {
                 : 'text-gray-700'
             }`}
           >
-            About
+            Nico Carlier
           </Link>
         </Menubar.Menu>
 
         <Menubar.Menu>
-          <Link
+          {/* <Link
             href="/life"
             className={`MenubarTrigger px-3 hover:text-gray-900 transition-colors duration-200 ${
               pathname.startsWith('/life')
@@ -35,7 +35,7 @@ const Navbar = () => {
             }`}
           >
             Life
-          </Link>
+          </Link> */}
         </Menubar.Menu>
 
         <div className="flex items-center ml-auto space-x-4">

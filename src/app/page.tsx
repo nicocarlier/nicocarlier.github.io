@@ -2,62 +2,146 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <main className="max-w-screen-md px-4 mx-auto space-y-6 md:px-0 py-8 pt-22">
-      <h2 className="space-x-3 text-2xl font-semibold font-display text-center">
-        <span className="wave inline-block animate-wave" aria-hidden="true">
-          👋{' '}
-        </span>
-        <span>{"Hi, I'm Nico Carlier"}</span>
-      </h2>
-      <section className="grid-cols-[4fr_9fr] gap-16 sm:grid">
+    <main className="max-w-screen-md px-4 mx-auto space-y-10 md:px-0 py-8 pt-22">
+      {/* Intro / About */}
+      <section className="flex flex-col sm:flex-row w-full items-start">
         {/* Portrait */}
-        <div className="float-left max-w-[200px] mr-4 mb-4 sm:float-none sm:items-start sm:justify-center sm:flex sm:mx-auto sm:mr-0 sm:mb-0">
-          <figure>
-            <Image
-              priority
-              alt="Portrait photo of Nico"
-              src="/portrait.webp"
-              className="object-contain object-bottom w-full rounded-xl shadow"
-              width={1067}
-              height={1317}
-              loading="eager"
-            />
-            <figcaption className="text-center text-walnut text-xs mt-2">
-              {`Nadi, Fiji - 2023`}
-            </figcaption>
-          </figure>
+        <div className="flex-shrink-0 w-full hidden sm:block sm:w-[200px] flex justify-center sm:justify-start mb-6 sm:mb-0">
+          <Image
+            priority
+            alt="Portrait photo of Nico"
+            src="/portrait.webp"
+            className="object-contain object-bottom w-full max-w-[160px] sm:max-w-[200px] rounded-xl shadow"
+            width={1067}
+            height={1317}
+            loading="eager"
+          />
         </div>
 
-        {/* About me */}
-          <div className="space-y-4">
-            <p>
-              I'm a full-stack software engineer at{' '}
-              <a href="https://inventive.ai" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Inventive AI (YC S23)</a>, building an AI Copilot that helps sales teams win RFPs.
-            </p>
-            <p>
-              I specialize in React/Next.js, TypeScript, Django/FastAPI, and event-driven architectures. I've shipped production-scale features from real-time AI streaming interfaces to document ingestion pipelines handling thousands of files.
-            </p>
-            <p>
-              Trained at <a href="https://www.appacademy.io/course/software-engineering/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">App Academy</a> (1000+ hours) and hold a B.E. in Mechanical Engineering from <a href="https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/bachelor-of-engineering-honours-behons.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">University of Auckland</a>, where I received the Best Mechanical Engineering Project Award for my research on <a href="https://www.imavs.org/papers/2024/28.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">UAV control systems</a>. Based in the San Francisco Bay Area.
-            </p>
-          </div>
+        {/* About text */}
+        <div className="flex flex-col space-y-4 text-gray-800 sm:pl-8 max-w-prose sm:max-w-none">
+          <p>
+            I’m a full-stack software engineer who enjoys building high-impact,
+            product-focused systems that ship to real users.
+          </p>
+
+          <p>
+            I’ve worked across frontend, backend, and infrastructure - from real-time,
+            AI-driven interfaces to event-driven systems at enterprise scale.
+          </p>
+
+          <p>
+            I value clean abstractions, ownership, and collaboration.
+          </p>
+
+          <p className="text-sm text-gray-600 pt-2">
+            Based in the San Francisco Bay Area.
+          </p>
+        </div>
       </section>
-      <section className="space-y-6">
-        <h2 className="text-xl font-semibold font-display">Highlights @ Inventive AI</h2>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li>
-            Led development of the Knowledge Hub, enabling enterprises to manage and search thousands of documents with sub-second filtering and collaboration features.
-          </li>
-          <li>
-            Implemented real-time updates with SSE, powering instant comments, tasks, and activity feeds to boost team engagement.
-          </li>
-          <li>
-            Designed a scalable frontend architecture (Redux + Context API) that supports zero-load-time navigation and simplified complex state handling.
-          </li>
-          <li>
-            Enhanced UX with collaboration tools (threads, @mentions, assignments, notifications).
-          </li>
-        </ul>
+
+      {/* Experience */}
+      <section className="space-y-4">
+        <h3 className="text-xl font-semibold font-display">Experience</h3>
+
+        <div className="space-y-3 text-gray-800">
+          <p>
+            <strong>Software Engineer</strong> —{' '}
+            <a
+              href="https://www.abridge.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Abridge
+            </a>
+            <span className="text-gray-500"> (2026 – Present)</span>
+          </p>
+
+          <p className="text-sm text-gray-700">
+            Working on enterprise systems within the product organization.
+          </p>
+
+          <p>
+            <strong>Software Engineer</strong> —{' '}
+            <a
+              href="https://inventive.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Inventive AI (YC S23)
+            </a>
+            <span className="text-gray-500"> (2024 – 2026)</span>
+          </p>
+
+          <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+            <li>
+              Led development of a knowledge hub supporting search, filtering,
+              and collaboration across thousands of documents.
+            </li>
+            <li>
+              Built real-time collaboration features using SSE for comments,
+              tasks, and activity feeds.
+            </li>
+            <li>
+              Designed scalable frontend state architecture (Redux + Context)
+              enabling low-latency navigation.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Earlier</strong> — Couplr AI, Aroa Biosurgery
+          </p>
+
+          <p className="text-sm text-gray-700">
+            Background in mechanical engineering with experience in applied
+            computation, optimization, and control systems.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="space-y-4">
+        <h3 className="text-xl font-semibold font-display">Skills</h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div>
+            <strong>Frontend</strong>
+            <ul className="mt-1 list-disc list-inside">
+              <li>React, Next.js, TypeScript</li>
+              <li>Redux, Tailwind CSS</li>
+              <li>Performance optimization</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong>Backend</strong>
+            <ul className="mt-1 list-disc list-inside">
+              <li>Django, FastAPI, Node.js</li>
+              <li>PostgreSQL, REST APIs</li>
+              <li>Event-driven architectures</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong>Systems</strong>
+            <ul className="mt-1 list-disc list-inside">
+              <li>Real-time systems (SSE / WebSockets)</li>
+              <li>Async processing & data pipelines</li>
+              <li>Scalability & reliability</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong>Other</strong>
+            <ul className="mt-1 list-disc list-inside">
+              <li>AWS, Docker, CI/CD</li>
+              <li>Testing & code quality</li>
+              <li>Product-driven engineering</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
   );
